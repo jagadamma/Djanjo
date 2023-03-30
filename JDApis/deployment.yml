@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: djanjo
+  labels:
+    app: polls
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: polls
+  template:
+    metadata:
+      labels:
+       app: polls
+    spec:
+      containers:
+        - image: jagadamma/jdapis-app:latest
+          name: danjo-config
+          ports:
+            - containerPort: 8000
