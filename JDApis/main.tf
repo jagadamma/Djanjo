@@ -9,8 +9,8 @@ terraform {
 
 provider "aws" {
   region     = "ap-south-1"
-  access_key = "AKIAX3XEDA5L43SLCXGO"
-  secret_key = "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"
+  access_key = "AKIASSCR7N7Q5WGKGRVV"
+  secret_key = "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"
 }
 resource "aws_iam_role" "eks-iam-role" {
  name = "devopsthehardway-eks-iam-role"
