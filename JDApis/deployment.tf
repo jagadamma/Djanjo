@@ -1,4 +1,15 @@
-replicas = 2
+provider "kubernetes" {
+ config_path = "/root/.kube/config"
+}
+resource "kubernetes_deployment" "djanjo" {
+ metadata {
+ name = "djano"
+ labels = {
+ name = "polls"
+ }
+ }
+ spec {
+ replicas = 2
  selector {
  match_labels = {
  name = "webapp"
